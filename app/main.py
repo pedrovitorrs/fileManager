@@ -7,7 +7,7 @@ from dicttoxml import dicttoxml
 app = FastAPI()
 
 '''
-    Retorna um [JSON, XML] com o nome de todos os arquivos.
+    Retorna [JSON, XML] com o nome de todos os arquivos do diretório especificado.
 '''
 @app.get("/{diretorio:path}/{fileType}")
 async def getFilesJSON(diretorio, fileType: FileType):
