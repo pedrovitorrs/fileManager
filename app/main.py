@@ -44,7 +44,7 @@ async def deleteFiles(diretorio: str):
         raise HTTPException(status_code=404, detail="Item not found")
     
 '''
-    Remove todos os arquivos do diretorio especificado.
+    Remove o arquivo do diretorio especificado.
 '''
 @app.delete("/{diretorio:path}/file")
 async def deleteFile(diretorio: str):
