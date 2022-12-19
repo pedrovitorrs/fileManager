@@ -29,6 +29,7 @@ async def getFileContent(diretorio: str):
         content = file.read()
         return {'status': 'ok', 'fileContent': content}
     except Exception as e:
+        print(e)
         raise HTTPException(status_code=404, detail="Item not found")
 
 '''
@@ -41,6 +42,7 @@ async def deleteFiles(diretorio: str):
             os.remove(os.path.join("/" + diretorio, file))
         return {'status': 'ok'}
     except Exception as e:
+        print(e)
         raise HTTPException(status_code=404, detail="Item not found")
     
 '''
